@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
+import { RxDotFilled } from 'react-icons/rx';
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -33,24 +34,30 @@ const NavBar = () => {
   ];
 
   const rectangleStyle = {
-    width: '400px',
-    height: '100px',
-    border: '2px solid black',
-    borderRadius: '10px',
+    width: '1000px',
+    height: '30px',
+    border: '0.5px solid black',
+    borderRadius: '100px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   };
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex justify-start items-center w-full h-20 px-4 text-black fixed">
       <div>
         <h1 className="text-2xl font-signature ml-2">Brogrammers</h1>
       </div>
-
-      <div style={rectangleStyle}>
-        <ul className="hidden md:flex">
+      <div className="center-rectangle" style={rectangleStyle}>
+        <ul className="flex">
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+              className="px-4 cursor-pointer capitalize font-medium text-black-500 hover:scale-105 duration-200">
+              <button>
+                <RxDotFilled />
+              </button>
+
               <Link to={link} smooth duration={500}>
                 {link}
               </Link>
