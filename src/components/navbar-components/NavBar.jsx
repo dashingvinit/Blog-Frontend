@@ -33,7 +33,7 @@ const NavBar = () => {
     },
   ];
 
-  const rectangleStyle = {
+  const rectangleStyle = { 
     width: '1000px',
     height: '30px',
     border: '0.5px solid black',
