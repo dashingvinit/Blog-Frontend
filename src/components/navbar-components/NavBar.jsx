@@ -1,6 +1,7 @@
+// Navbar.jsx
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
     <nav style={styles.navbar}>
       <div style={styles.navbarContainer}>
         <Link to="/" style={styles.navbarLogo}>
-          Brogrammers
+          Your Blog Name
         </Link>
 
         <div
@@ -45,7 +46,9 @@ const Navbar = () => {
             </Link>
           </li>
           <li style={styles.navItem}>
-            <button style={styles.loginButton}>Login</button>
+            <Link to="/login" style={styles.loginButton} target="_blank">
+              Login
+            </Link>
           </li>
         </ul>
       </div>
@@ -120,4 +123,3 @@ const styles = {
 };
 
 export default Navbar;
-
