@@ -1,7 +1,6 @@
-// Navbar.jsx
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import brogrammersLogo from '../../assets/images/brogrammers.webp';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +13,16 @@ const Navbar = () => {
     <nav style={styles.navbar}>
       <div style={styles.navbarContainer}>
         <Link to="/" style={styles.navbarLogo}>
-          Your Blog Name
+          <img
+            style={{ width: '100px', height: 'auto' }}
+            src={brogrammersLogo}
+            alt="Brogrammers"
+          />
         </Link>
 
         <div
           style={{ ...styles.menuIcon, ...(isOpen && styles.menuIconOpen) }}
-          onClick={toggleNavbar}
-        >
+          onClick={toggleNavbar}>
           <i className="fas fa-bars"></i>
         </div>
 
@@ -31,7 +33,10 @@ const Navbar = () => {
             </Link>
           </li>
           <li style={styles.navItem}>
-            <Link to="/categories" style={styles.navLinks} onClick={toggleNavbar}>
+            <Link
+              to="/categories"
+              style={styles.navLinks}
+              onClick={toggleNavbar}>
               Categories
             </Link>
           </li>
