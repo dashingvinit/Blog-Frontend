@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Login from '../../pages/Pages';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li style={styles.navItem}>
-            <Link to="/login" style={styles.loginButton} target="_blank">
+            <Link to="/Login" style={styles.loginButton} target="_blank">
               Login
             </Link>
           </li>
